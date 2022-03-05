@@ -429,6 +429,8 @@ namespace Launcher
                 buttonMoveDown.Enabled = true;
 
                 ConfigureView();
+
+                buttonMoveDown.Focus();
             }
         }
 
@@ -451,6 +453,8 @@ namespace Launcher
                 buttonMoveUp.Enabled = true;
 
                 ConfigureView();
+
+                buttonMoveUp.Focus();
             }
         }
 
@@ -842,6 +846,7 @@ namespace Launcher
             if (form.ShowDialog() == DialogResult.OK)
             {
                 _launcherController.Add(form.ModuleInfo);
+                dataGridViewAppInfo.Invalidate();
                 ConfigureView();
             }
         }
