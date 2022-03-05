@@ -1,7 +1,7 @@
 # Launcher
 A simple launcher for Windows applications, Windows services and batch (.bat) scripts.
 
-> ⚠️ Although developed in .Net 6, both library and app are Windows only.
+> ⚠️ Although developed in .Net 6, this solution (both library and app) is Windows only.
 
 ## The solution contains 2 projects:
 * **Launcher.Core**: a library that allows you to start, monitor and stop Windows applications, Windows services and batch scritps.
