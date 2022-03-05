@@ -393,7 +393,10 @@ namespace Launcher.Core
 
             await RefreshModulesInformation();
 
-            foreach (ModuleInfo moduleInfo in _launcherConfiguration.Modules.Where(m => m.RunOnStartAll && m.ModuleStatus == ModuleStatus.Stopped))
+            foreach (ModuleInfo moduleInfo in _launcherConfiguration.Modules.Where(
+                m => m.RunOnStartAll
+                && m.ModuleStatus == ModuleStatus.Stopped
+                && File.Exists(m.Path)))
             {
                 if (moduleInfo.IsService && moduleInfo.ServiceController is not null)
                 {
@@ -419,6 +422,11 @@ namespace Launcher.Core
         /// <returns>A task that represents the asynchronous operation.</returns>
         public async Task StartModuleAsync(ModuleInfo moduleInfo)
         {
+            if (File.Exists(moduleInfo.Path) is false)
+            {
+                return;
+            }
+
             LauncherConfigurationStatus = LauncherConfigurationStatus.StartModuleRequested;
 
             ConfigureServiceControllers();
@@ -701,6 +709,11 @@ namespace Launcher.Core
         /// <exception cref="ArgumentException">When the <paramref name="moduleInfo"/> is not contained in the list of modules.</exception>
         private async Task RunBatchScriptAsync(ModuleInfo moduleInfo)
         {
+            if (File.Exists(moduleInfo.Path) is false)
+            {
+                return;
+            }
+
             if (moduleInfo is null)
             {
                 throw new ArgumentNullException(nameof(moduleInfo));
@@ -735,6 +748,11 @@ namespace Launcher.Core
 
         private async Task StartServiceAsync(ModuleInfo moduleInfo)
         {
+            if (File.Exists(moduleInfo.Path) is false)
+            {
+                return;
+            }
+
             if (moduleInfo is null)
             {
                 throw new ArgumentNullException(nameof(moduleInfo));
@@ -772,6 +790,11 @@ namespace Launcher.Core
 
         private void StartApp(ModuleInfo moduleInfo)
         {
+            if (File.Exists(moduleInfo.Path) is false)
+            {
+                return;
+            }
+
             if (moduleInfo is null)
             {
                 throw new ArgumentNullException(nameof(moduleInfo));
