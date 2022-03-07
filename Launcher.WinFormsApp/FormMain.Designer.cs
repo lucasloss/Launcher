@@ -64,6 +64,8 @@
             this.labelLoadedFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelProjectPath = new System.Windows.Forms.ToolStripStatusLabel();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userManualPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppInfo)).BeginInit();
             this.contextMenu.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -134,7 +136,8 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.toolsToolStripMenuItem});
+            this.toolsToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(564, 24);
@@ -392,6 +395,20 @@
             this.statusLabelProjectPath.Size = new System.Drawing.Size(71, 17);
             this.statusLabelProjectPath.Text = "New Project";
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userManualPDFToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // userManualPDFToolStripMenuItem
+            // 
+            this.userManualPDFToolStripMenuItem.Name = "userManualPDFToolStripMenuItem";
+            this.userManualPDFToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.userManualPDFToolStripMenuItem.Text = "User Manual (PDF)";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -460,5 +477,7 @@
         private ToolStripStatusLabel statusLabelProjectPath;
         private ToolStripSeparator contextMenuProcessesSeparator;
         private ToolStripMenuItem processesToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem userManualPDFToolStripMenuItem;
     }
 }

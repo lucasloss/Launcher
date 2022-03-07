@@ -100,6 +100,7 @@ namespace Launcher
             startToolStripMenuItem.Image = Resources.Run_16x;
             stopToolStripMenuItem.Image = Resources.Stop_16x;
             statusLabelProjectPath.Image = Resources.Document_16x;
+            userManualPDFToolStripMenuItem.Image = Resources.F1Help_16x;
 
             FormClosing += FormMain_FormClosing;
 
@@ -118,6 +119,7 @@ namespace Launcher
             saveToolStripMenuItem.Click += SaveToolStripMenuItem_Click;
             exitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             settingsToolStripMenuItem.Click += SettingsToolStripMenuItem_Click;
+            userManualPDFToolStripMenuItem.Click += UserManualPDFToolStripMenuItem_Click;
 
             startToolStripMenuItem.Click += StartToolStripMenuItem_Click;
             stopToolStripMenuItem.Click += StopToolStripMenuItem_Click;
@@ -127,6 +129,27 @@ namespace Launcher
 
             ConfigureGrid();
             ConfigureView();
+        }
+
+        private void UserManualPDFToolStripMenuItem_Click(object? sender, EventArgs e)
+        {
+            string file = Path.Combine(Application.StartupPath, "Documents", "LauncherManual.pdf");
+
+            if (!File.Exists(file))
+            {
+                MessageBox.Show(
+                    $"Unable to find the user manual file ({file}).",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+                return;
+            }
+
+            Process.Start(new ProcessStartInfo(file)
+            {
+                UseShellExecute = true,
+            });
         }
 
         private void StatusLabelProjectPath_DoubleClick(object? sender, EventArgs e)
