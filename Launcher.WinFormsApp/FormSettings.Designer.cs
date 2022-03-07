@@ -45,28 +45,34 @@
             this.flowLayoutPanelBottom.Controls.Add(this.buttonSave);
             this.flowLayoutPanelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanelBottom.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanelBottom.Location = new System.Drawing.Point(0, 67);
+            this.flowLayoutPanelBottom.Location = new System.Drawing.Point(0, 65);
             this.flowLayoutPanelBottom.Name = "flowLayoutPanelBottom";
             this.flowLayoutPanelBottom.Padding = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.flowLayoutPanelBottom.Size = new System.Drawing.Size(441, 29);
+            this.flowLayoutPanelBottom.Size = new System.Drawing.Size(441, 31);
             this.flowLayoutPanelBottom.TabIndex = 2;
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(357, 3);
+            this.buttonCancel.AutoSize = true;
+            this.buttonCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonCancel.Location = new System.Drawing.Point(379, 3);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(53, 25);
             this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(276, 3);
+            this.buttonSave.AutoSize = true;
+            this.buttonSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonSave.Location = new System.Drawing.Point(332, 3);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.Size = new System.Drawing.Size(41, 25);
             this.buttonSave.TabIndex = 0;
             this.buttonSave.Text = "Save";
+            this.buttonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSave.UseVisualStyleBackColor = true;
             // 
             // textBoxDefaultStartupProject
@@ -117,6 +123,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             this.flowLayoutPanelBottom.ResumeLayout(false);
+            this.flowLayoutPanelBottom.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

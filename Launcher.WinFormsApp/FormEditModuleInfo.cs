@@ -72,6 +72,9 @@ namespace Launcher
 
         private void ConfigureForm()
         {
+            buttonSave.Image = Resources.Save_16x;
+            buttonCancel.Image = Resources.Cancel_16x;
+
             buttonSave.Click += ButtonSave_Click;
             buttonCancel.Click += ButtonCancel_Click;
             buttonSelectFile.Click += ButtonSelectFile_Click;

@@ -34,6 +34,8 @@
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.startToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuProcessesSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.processesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,8 +64,6 @@
             this.labelLoadedFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusLabelProjectPath = new System.Windows.Forms.ToolStripStatusLabel();
-            this.contextMenuProcessesSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.processesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppInfo)).BeginInit();
             this.contextMenu.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -118,6 +118,17 @@
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
             this.stopToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.stopToolStripMenuItem.Text = "Stop";
+            // 
+            // contextMenuProcessesSeparator
+            // 
+            this.contextMenuProcessesSeparator.Name = "contextMenuProcessesSeparator";
+            this.contextMenuProcessesSeparator.Size = new System.Drawing.Size(122, 6);
+            // 
+            // processesToolStripMenuItem
+            // 
+            this.processesToolStripMenuItem.Name = "processesToolStripMenuItem";
+            this.processesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.processesToolStripMenuItem.Text = "Processes";
             // 
             // menuStrip
             // 
@@ -218,8 +229,8 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Text = "Settings...";
             // 
             // buttonAdd
             // 
@@ -380,17 +391,6 @@
             this.statusLabelProjectPath.Name = "statusLabelProjectPath";
             this.statusLabelProjectPath.Size = new System.Drawing.Size(71, 17);
             this.statusLabelProjectPath.Text = "New Project";
-            // 
-            // contextMenuProcessesSeparator
-            // 
-            this.contextMenuProcessesSeparator.Name = "contextMenuProcessesSeparator";
-            this.contextMenuProcessesSeparator.Size = new System.Drawing.Size(122, 6);
-            // 
-            // processesToolStripMenuItem
-            // 
-            this.processesToolStripMenuItem.Name = "processesToolStripMenuItem";
-            this.processesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.processesToolStripMenuItem.Text = "Processes";
             // 
             // FormMain
             // 
