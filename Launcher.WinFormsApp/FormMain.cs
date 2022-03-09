@@ -67,7 +67,7 @@ namespace Launcher
             _launcherController.ModuleInfoChanged += LauncherController_ModuleInfoChanged;
             _launcherController.LauncherConfigurationStatusChanged += LauncherController_LauncherConfigurationStatusChanged;
             _launcherController.MonitoringChanged += LauncherController_MonitoringChanged;
-            dataGridViewAppInfo.DataSource = new BindingList<ModuleInfo>(_launcherController.Modules.ToList());
+            dataGridViewAppInfo.DataSource = _launcherController.Modules;
         }
 
         private void LauncherController_MonitoringChanged(object? sender, EventArgs e)
@@ -579,7 +579,7 @@ namespace Launcher
 
         private void ConfigureGrid()
         {
-            dataGridViewAppInfo.DataSource = new BindingList<ModuleInfo>(_launcherController.Modules.ToList());
+            dataGridViewAppInfo.DataSource = _launcherController.Modules;
             dataGridViewAppInfo.Configure();
             dataGridViewAppInfo.ShowCellToolTips = true;
             dataGridViewAppInfo.ReadOnly = false;
